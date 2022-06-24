@@ -29,4 +29,17 @@ router.get("/spaces/:id", async (req, res, next) => {
   }
 });
 
+router.delete("/story/:id", authMiddleware, async (req, res, next) => {
+  try {
+    const idToDelete = parseInt(req.params.id);
+    await Story.destroy({
+      where: { id: idToDelete },
+    });
+    res.status(200).send("Story deleted succesfully");
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;

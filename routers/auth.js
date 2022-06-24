@@ -4,6 +4,7 @@ const { toJWT } = require("../auth/jwt");
 const authMiddleware = require("../auth/middleware");
 const User = require("../models/").user;
 const Space = require("../models/").space;
+const Story = require("../models/").story;
 const { SALT_ROUNDS } = require("../config/constants");
 
 const router = new Router();
@@ -25,10 +26,12 @@ router.post("/login", async (req, res, next) => {
         message: "User with that email not found or password incorrect",
       });
     }
-
+    const mySpace = await Space.findByPk(user.dataValues.id, {
+      include: [Story],
+    });
     delete user.dataValues["password"]; // don't send back the password hash
     const token = toJWT({ userId: user.id });
-    return res.status(200).send({ token, user: user.dataValues });
+    return res.status(200).send({ token, user: user.dataValues, mySpace });
   } catch (error) {
     console.log(error);
     return res.status(400).send({ message: "Something went wrong, sorry" });
@@ -75,10 +78,19 @@ router.post("/signup", async (req, res) => {
 // The /me endpoint can be used to:
 // - get the users email & name using only their token
 // - checking if a token is (still) valid
-router.get("/me", authMiddleware, async (req, res) => {
+router.get("/me", authMiddleware, async (req, res, next) => {
   // don't send back the password hash
-  delete req.user.dataValues["password"];
-  res.status(200).send({ ...req.user.dataValues });
+  try {
+    // console.log("My ID", req.user.dataValues.id);
+    const mySpace = await Space.findByPk(req.user.dataValues.id, {
+      include: [Story],
+    });
+    delete req.user.dataValues["password"];
+    res.status(200).send({ ...req.user.dataValues, mySpace });
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
 });
 
 module.exports = router;

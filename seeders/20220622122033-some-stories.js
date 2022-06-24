@@ -25,8 +25,6 @@ module.exports = {
           updatedAt: new Date(),
           spaceId: 1,
         },
-        // A massive statue of Avatar Aang was created on Aang Memorial Island, a small island located in Yue Bay. A teenage Aang is depicted wearing Air Nomad monk robes and holding a staff with the airbending symbol on top, overlooking the city he founded with the help of his friends. The statue was created and donated by the Fire Nation as a sign of peace and goodwill. As is tradition, a statue of Aang was also added to the inner sanctuary of the Southern Air Temple in order to keep the line of statues of past Avatars up to date. His statue stood in the middle of the assemblage.",
-
         {
           name: "Aang the Airnomad",
           content:
@@ -39,6 +37,46 @@ module.exports = {
         },
         {
           name: "Zuko the Fire Nation Royal",
+          content:
+            "Zuko is a Fire Nation royal and firebending master who reigned as Fire Lord from 100 AG until his abdication in 167 AG. He is the eldest child and only son of Princess Ursa and Fire Lord Ozai. Originally the primary enemy of Team Avatar, Zuko devoted three years to trying to capture the long-lost Avatar to end his banishment and regain his honor as Crown Prince of the Fire Nation. He is recognizable by the distinctive burn scar on the left side of his face, which was given to him by his father, Ozai, shortly before his banishment as a result of an incident in which he unintentionally disrespected his father by speaking out of turn and refusing to duel him.",
+          imageUrl:
+            "https://i0.wp.com/jawwaby.club/wp-content/uploads/2022/04/Worst-choice-Zuko-has-ever-made-in-Avatar-The-Last.jpg?fit=1600%2C901&ssl=1",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          spaceId: 2,
+        },
+        {
+          name: "Aang the second",
+          content:
+            "A massive statue of Avatar Aang was created on Aang Memorial Island, a small island located in Yue Bay. A teenage Aang is depicted wearing Air Nomad monk robes and holding a staff with the airbending symbol on top, overlooking the city he founded with the help of his friends. The statue was created and donated by the Fire Nation as a sign of peace and goodwill. As is tradition, a statue of Aang was also added to the inner sanctuary of the Southern Air Temple in order to keep the line of statues of past Avatars up to date. His statue stood in the middle of the assemblage.",
+          imageUrl:
+            "https://wegotthiscovered.com/wp-content/uploads/2020/08/Screen-Shot-2020-08-12-at-10.45.59-PM.jpg",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          spaceId: 2,
+        },
+        {
+          name: "Zuko the second",
+          content:
+            "Zuko is a Fire Nation royal and firebending master who reigned as Fire Lord from 100 AG until his abdication in 167 AG. He is the eldest child and only son of Princess Ursa and Fire Lord Ozai. Originally the primary enemy of Team Avatar, Zuko devoted three years to trying to capture the long-lost Avatar to end his banishment and regain his honor as Crown Prince of the Fire Nation. He is recognizable by the distinctive burn scar on the left side of his face, which was given to him by his father, Ozai, shortly before his banishment as a result of an incident in which he unintentionally disrespected his father by speaking out of turn and refusing to duel him.",
+          imageUrl:
+            "https://i0.wp.com/jawwaby.club/wp-content/uploads/2022/04/Worst-choice-Zuko-has-ever-made-in-Avatar-The-Last.jpg?fit=1600%2C901&ssl=1",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          spaceId: 2,
+        },
+        {
+          name: "Aang the avatar",
+          content:
+            "A massive statue of Avatar Aang was created on Aang Memorial Island, a small island located in Yue Bay. A teenage Aang is depicted wearing Air Nomad monk robes and holding a staff with the airbending symbol on top, overlooking the city he founded with the help of his friends. The statue was created and donated by the Fire Nation as a sign of peace and goodwill. As is tradition, a statue of Aang was also added to the inner sanctuary of the Southern Air Temple in order to keep the line of statues of past Avatars up to date. His statue stood in the middle of the assemblage.",
+          imageUrl:
+            "https://wegotthiscovered.com/wp-content/uploads/2020/08/Screen-Shot-2020-08-12-at-10.45.59-PM.jpg",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          spaceId: 2,
+        },
+        {
+          name: "Zuko the villain",
           content:
             "Zuko is a Fire Nation royal and firebending master who reigned as Fire Lord from 100 AG until his abdication in 167 AG. He is the eldest child and only son of Princess Ursa and Fire Lord Ozai. Originally the primary enemy of Team Avatar, Zuko devoted three years to trying to capture the long-lost Avatar to end his banishment and regain his honor as Crown Prince of the Fire Nation. He is recognizable by the distinctive burn scar on the left side of his face, which was given to him by his father, Ozai, shortly before his banishment as a result of an incident in which he unintentionally disrespected his father by speaking out of turn and refusing to duel him.",
           imageUrl:
