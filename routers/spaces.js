@@ -42,4 +42,21 @@ router.delete("/story/:id", authMiddleware, async (req, res, next) => {
   }
 });
 
+router.post("/createstory/:id", authMiddleware, async (req, res, next) => {
+  try {
+    const { name, content, imageUrl } = req.body;
+    // console.log(name, content, imageUrl);
+    const spaceId = parseInt(req.params.id);
+    const response = await Story.create({
+      name,
+      content,
+      imageUrl,
+      spaceId,
+    });
+    res.status(200).send("Story succesfully created");
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
 module.exports = router;
