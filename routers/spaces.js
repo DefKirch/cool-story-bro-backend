@@ -53,7 +53,7 @@ router.post("/createstory/:id", authMiddleware, async (req, res, next) => {
       imageUrl,
       spaceId,
     });
-    res.status(200).send("Story succesfully created");
+    res.status(201).send("Story succesfully created");
   } catch (e) {
     console.log(e.message);
     next(e);
