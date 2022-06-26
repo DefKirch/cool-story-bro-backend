@@ -59,4 +59,26 @@ router.post("/createstory/:id", authMiddleware, async (req, res, next) => {
     next(e);
   }
 });
+
+router.put("/editmyspace/:spaceId", authMiddleware, async (req, res, next) => {
+  try {
+    const { title, description, bgColor, color } = req.body;
+    const spaceId = parseInt(req.params.spaceId);
+    const response = await Space.update(
+      {
+        title,
+        description,
+        backgroundColor: bgColor,
+        color,
+      },
+      {
+        where: { id: spaceId },
+      }
+    );
+    res.status(200).send("Space edited succesfully");
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
 module.exports = router;
